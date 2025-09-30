@@ -2,7 +2,7 @@ version: "3.9"
 services:
   quiz:
     build: .
-    image: quiz-app:latest
+    #image: quiz-app:latest
     container_name: quiz-app
     ports:
       - "3000:3000"
