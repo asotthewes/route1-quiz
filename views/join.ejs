@@ -1,0 +1,9 @@
+<% if (typeof error !== 'undefined') { %>
+  <div class="alert"><%= error %></div>
+<% } %>
+<form method="post" action="/join" class="card">
+  <label for="code">Vul je unieke code in</label>
+  <input id="code" name="code" placeholder="BV: 9XG2QF" required />
+  <button type="submit">Start</button>
+</form>
+<p class="muted">Geen code? Vraag de organisator.</p>

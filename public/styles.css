@@ -1,0 +1,20 @@
+:root { --bg:#0b1020; --fg:#f3f6ff; --muted:#9aa7c1; --card:#121934; --acc:#4f8dfd; --warn:#ffd166; }
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;}
+header{padding:24px 16px;border-bottom:1px solid #1b254f;background:#0e1631}
+header h1{margin:0;font-size:20px}
+main{max-width:720px;margin:24px auto;padding:0 16px}
+footer{max-width:720px;margin:24px auto;padding:0 16px;color:var(--muted);font-size:12px}
+.card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.35);}
+.card.center{text-align:center}
+label{display:block;margin-bottom:8px;color:var(--muted)}
+input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #2a3a78;background:#0e1631;color:var(--fg);}
+button{margin-top:12px;padding:10px 14px;border:0;border-radius:12px;background:var(--acc);color:#fff;font-weight:600;cursor:pointer}
+button.secondary{background:transparent;border:1px solid #2a3a78}
+.row{display:flex;gap:8px;align-items:center}
+.row input{flex:1}
+.alert{margin:12px 0;padding:10px 12px;border-left:4px solid var(--warn);background:#221b05;border-radius:8px}
+.progress{color:var(--muted);font-size:13px;margin-bottom:8px}
+.question{font-size:18px;margin:10px 0 6px}
+details{margin:8px 0}
+summary{cursor:pointer}
+.muted{color:var(--muted)}

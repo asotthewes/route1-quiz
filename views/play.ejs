@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="progress">Vraag <%= index + 1 %> van <%= total %></div>
+  <p class="question"><%= q.text %></p>
+
+  <% if (typeof error !== 'undefined') { %>
+    <div class="alert"><%= error %></div>
+  <% } %>
+
+  <% if (hints && hints.length) { %>
+    <details open>
+      <summary>Hints (<%= hints.length %>)</summary>
+      <ul>
+        <% hints.forEach(h => { %>
+          <li><%= h.text %></li>
+        <% }) %>
+      </ul>
+    </details>
+  <% } %>
+
+  <form method="post" action="/answer" class="row">
+    <input type="hidden" name="qid" value="<%= q.id %>" />
+    <input name="answer" placeholder="Je antwoord" autofocus />
+    <button type="submit">Controleer</button>
+  </form>
+
+  <form method="post" action="/hint">
+    <input type="hidden" name="h" value="<%= hcount %>" />
+    <button type="submit" class="secondary">Vraag hint</button>
+  </form>
+</div>

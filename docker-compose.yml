@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  quiz:
+    build: .
+    image: quiz-app:latest
+    container_name: quiz-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - ADMIN_TOKEN=${ADMIN_TOKEN}
+      - APP_TITLE=${APP_TITLE}
+    volumes:
+      - quiz_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  quiz_data: {}

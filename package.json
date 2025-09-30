@@ -1,0 +1,20 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "Sequential quiz with hints and unique join codes",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "cookie-parser": "^1.4.6",
+    "dayjs": "^1.11.13",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "nanoid": "^5.0.7"
+  }
+}
