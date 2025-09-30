@@ -14,21 +14,47 @@ if (row.c === 0) {
 
     const qs = [
       {
-        text: 'Welke kleur heeft de Nederlandse vlag bovenaan? (typ het woord)',
-        answer: 'rood',
-        hints: ['Het is niet blauw.', 'Denk aan rood-wit-blauw.']
+        text: "Aan het Brinkplein staat een gebouw met een weegschaal erop. Hoe heet dit gebouw?",
+        answer: "de waag",
+        hints: [
+          "Het staat midden op de Brink.",
+          "Het werd vroeger gebruikt om goederen te wegen."
+        ]
       },
       {
-        text: 'Hoeveel dagen zitten er in een week? (cijfer)',
-        answer: '7',
-        hints: ['Meer dan 6, minder dan 8.']
+        text: "In welke rivier ligt Deventer?",
+        answer: "ijssel",
+        hints: [
+          "Het is een zijtak van de Rijn.",
+          "Deventer ligt aan de ..."
+        ]
       },
       {
-        text: 'Vul aan: Chat___ (drie letters)',
-        answer: 'gpt',
-        hints: ['De laatste letter is T.']
+        text: "Welke bekende koek hoort bij Deventer?",
+        answer: "deventer koek",
+        hints: [
+          "Het is een kruidige lekkernij.",
+          "Het wordt vaak in blokken verkocht."
+        ]
+      },
+      {
+        text: "Wat is de bijnaam van de Lebuinuskerk?",
+        answer: "grote kerk",
+        hints: [
+          "Het is de grootste kerk van Deventer.",
+          "De bijnaam begint met 'G'."
+        ]
+      },
+      {
+        text: "Welke sportieve tocht eindigt traditioneel in Nijmegen, maar komt uit Deventer?",
+        answer: "ijsselloop",
+        hints: [
+          "Het is een hardloopwedstrijd.",
+          "De naam verwijst naar de rivier."
+        ]
       }
     ];
+    
 
     qs.forEach((q, i) => {
       const { lastInsertRowid: questionId } = qStmt.run(quizId, i, q.text, q.answer.toLowerCase());
